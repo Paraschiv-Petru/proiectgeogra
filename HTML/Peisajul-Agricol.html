@@ -32,9 +32,12 @@
             </nav>
         </header>
 
-        <section>
-            <script src="../JS/script-meniu.js"></script>
-            
+<section>
+    <script src="../JS/script-meniu.js"></script>
+
+    <div class="d-md-flex align-items-start gap-4">
+        
+        <div class="flex-grow-1">
             <h2>Capitolul I: Peisajul Agricol și Transformarea Stepei</h2>
             
             <p>
@@ -46,60 +49,103 @@
                 Deoarece regiunea este una dintre cele mai aride din România, peisajul este brăzdat de canale de irigații (precum Canalul Dunăre-Poarta Albă), care funcționează ca artere vitale pentru agricultura intensivă. Aceste canale au transformat nu doar peisajul, ci și modul în care agricultura poate prospera în zone aparent neprielnice.
             </p>
             <p>
-                Sistemele de irigații din Dobrogea se întind pe sute de kilometri, transportând apă din Dunăre și din alte surse către terenurile agricole. Aceste lucrări hidrotehnice au permis cultivarea unor terenuri care altfel ar rămâne sterpe. Infrastructure-le de irigații au generat un ecosistem artificial de canale, diguri și rezervoare care domină peisajul rural și au creat un nou tip de mediu.
+                Sistemele de irigații din Dobrogea se întind pe sute de kilometri, transportând apă din Dunăre și din alte surse către terenurile agricole. Infrastructure-le de irigații au generat un ecosistem artificial de canale, diguri și rezervoare care domină peisajul rural și au creat un nou tip de mediu.
             </p>
 
             <h3>Viticultura</h3>
             <p>
                 Dealurile Dobrogei, în special în zone precum Murfatlar sau Babadag, prezintă un peisaj antropic specific: terasări minuțioase și rânduri geometrice de viță-de-vie care au modificat panta naturală a reliefului pentru a maximiza expunerea la soare. Aceste terasări nu sunt doar o soluție practică, ci și o mărturie a ingeniozității omului în domarea naturii.
             </p>
-            <p>
-                Regiunile viticole ale Dobrogei se caracterizează prin terase construite pe versanți, o tehnică agricolă ancestrală care a fost perfecționată de-a lungul timpului. Vinurile dobrogeane sunt cunoscute internațional, iar peisajul viticol devine din ce în ce mai o atracție turistică. Cultivarea vieții pe terase a schimbat complet aspectul unor zone, transformând pante naturale în culturi structurate și arhitecturate.
-            </p>
+        </div>
 
-            <h3>Agricultura Intensivă și Cultura de Masă</h3>
-            <p>
-                Dincolo de irigații și viticultura, Dobrogea a devenit și o regiune a culturii de masă a cerealelor și plantelor tehnice. Câmpurile de grâu, porumb, floarea-soarelui și rapiță se întind la pierzere de vedere, transformând peisajul într-o succesiune monotonă de culori sezoniere - galben auriu în vară, maro în toamnă. Aceste monoculturi agricole au eliminat mare parte din vegetația naturală și au creat un peisaj pur antropic.
-            </p>
+        <div class="video-container" style="min-width: 320px; max-width: 450px; top: 20px; padding-bottom: 20px;">
+            <video autoplay muted loop playsinline style="width: 100%; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.2);">
+                <source src="../video/peisajul-agricol/tractor.mp4" type="video/mp4">
+                Browserul tău nu suportă elementul video.
+            </video>
+        </div>
+    </div>
 
-       
-            <div class="container">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="../poze/peisajul-agricol/irigatie.jpg" class="card-img-top" alt="Irigații" style="height: 225px; object-fit: cover;">
-                            
-                            <div class="card-body">
-                                <p class="card-text">Sistemele de irigații din Dobrogea.</p>
-                            </div>
-                        </div>
+    <div class="mt-4">
+        <p>
+            Regiunile viticole ale Dobrogei se caracterizează prin terase construite pe versanți, o tehnică agricolă ancestrală care a fost perfecționată de-a lungul timpului. Vinurile dobrogeane sunt cunoscute internațional, iar peisajul viticol devine din ce în ce mai o atracție turistică. Cultivarea vieții pe terase a schimbat complet aspectul unor zone, transformând pante naturale în culturi structurate și arhitecturate.
+        </p>
+
+        <h3>Agricultura Intensivă și Cultura de Masă</h3>
+        <p>
+            Dincolo de irigații și viticultura, Dobrogea a devenit și o regiune a culturii de masă a cerealelor și plantelor tehnice. Câmpurile de grâu, porumb, floarea-soarelui și rapiță se întind la pierzere de vedere, transformând peisajul într-o succesiune monotonă de culori sezoniere - galben auriu în vară, maro în toamnă. Aceste monoculturi agricole au eliminat mare parte din vegetația naturală și au creat un peisaj pur antropic.
+        </p>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const cards = document.querySelectorAll('.video-card');
+
+                    cards.forEach(card => {
+                        const video = card.querySelector('.hover-video');
+
+                        card.addEventListener('mouseenter', () => {
+                            // Pornim video-ul la hover
+                            video.play().catch(error => {
+                                console.log("Autoplay a fost blocat de browser:", error);
+                            });
+                        });
+
+                        card.addEventListener('mouseleave', () => {
+                            // Oprim și resetăm video-ul când mouse-ul pleacă
+                            video.pause();
+                            video.currentTime = 0;
+                        });
+                    });
+                });
+            </script>
+            <div class="col">
+                <div class="card shadow-sm video-card">
+                    <div class="media-container">
+                        <img src="../poze/peisajul-agricol/irigatie.jpg" class="card-img-top" alt="Irigații">
+                        <video class="hover-video" muted loop playsinline>
+                            <source src="..//video/peisajul-agricol/irigatii.mov" type="video/mp4">
+                        </video>
                     </div>
-
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="../poze/peisajul-agricol/viticultura.jpg" class="card-img-top" alt="Viticultură" style="height: 225px; object-fit: cover;">
-                            
-                            <div class="card-body">
-                                <p class="card-text">Podgoriile și terasarea versanților.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="../poze/peisajul-agricol/cereale.jpg" class="card-img-top" alt="Cereale" style="height: 225px; object-fit: cover;">
-                            
-                            <div class="card-body">
-                                <p class="card-text">Culturile de cereale.</p>
-                            </div>
-                        </div>
-                    </div>
-
+                    <div class="card-body">
+                        <p class="card-text">Sistemele de irigații din Dobrogea.</p>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <div class="col">
+                <div class="card shadow-sm video-card">
+                    <div class="media-container">
+                        <img src="../poze/peisajul-agricol/viticultura.jpg" class="card-img-top" alt="Viticultură">
+                        <video class="hover-video" muted loop playsinline>
+                            <source src="../video/peisajul-agricol/viticultura.mov" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Podgoriile și terasarea versanților.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card shadow-sm video-card">
+                    <div class="media-container">
+                        <img src="../poze/peisajul-agricol/cereale.jpg" class="card-img-top" alt="Cereale">
+                        <video class="hover-video" muted loop playsinline>
+                            <source src="../video/peisajul-agricol/cereale.mov" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Culturile de cereale.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
         
         
