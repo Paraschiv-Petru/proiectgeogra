@@ -1,106 +1,179 @@
 <!DOCTYPE html>
 <html lang="ro">
+
 <head>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Peisajul Energetic și Industrial</title>
-        <link rel="stylesheet" href="../CSS/peisajul-energetic.css">
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEZPYhaQr3a9KRkNqx_NV4vyX03JbacsY&callback=initMap" async defer></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peisajul Energetic și Industrial</title>
+    <link rel="stylesheet" href="../CSS/peisajul-energetic.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
-
-
-
 <body>
-    <header>
-        <div class="header-top">
-            <h1>Peisajul Energetic și Industrial – "Pădurea de Fier"</h1>
-            <button id="hamburger-menu" class="hamburger-btn" onclick="toggleMenu()" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        <nav class="menu-navbar">
-            <ul class="menu">
+    <main>
+    <header id="header">
+        <div class="header-content">
+            <h1>Amprenta Omului în Peisajul Dobrogean<br><span class="subtitle">Echilibrul dintre Tradiție și Modernitate</span></h1>
+            
+            <nav class="main-nav">
+                <ul class="nav-links">
                 <li><a href="../Acasă.html">Acasă</a></li>
                 <li><a href="Peisajul-Agricol.html">Peisajul Agricol</a></li>
                 <li><a href="Peisajul-Energetic.html">Peisajul Energetic</a></li>
                 <li><a href="Peisajul-Urban.html">Peisajul Urban</a></li>
                 <li><a href="Surse.html">Surse</a></li>
-            </ul>
-        </nav>
+                </ul>
+            </nav>
+        </div>
     </header>
-    
 
-    <section>
-        <script src="../JS/script-meniu.js"></script>
-        
-        <h2>Capitolul II: Peisajul Energetic și Industrial – "Pădurea de Fier"</h2>
-        
-        <p>
-            În ultimele decenii, Dobrogea a devenit centrul energetic al României, modificând linia orizontului într-un mod spectaculos. Industria energetică și cea industrială au redesenat complet aspectul regiunii, transformând-o într-un peisaj de contraste impresionante.
-        </p>
+        <section>
+            <script src="../JS/script-meniu.js"></script>
 
-        <h3>Parcurile Eoliene</h3>
-        <p>
-            Câmpurile de eoliene (precum cel de la Fântânele-Cogealac) au creat un peisaj tehnologic unic. Sute de turbine albe, de înălțimi colosale, domină platourile înalte, transformând vântul — un element natural invizibil — într-o resursă industrială vizibilă. Aceste structuri gigantice au devenit, pentru mulți, simbolul unei Dobrogei moderne, deși pentru alții reprezintă o schimbare spectacolului natural al regiunii.
-        </p>
-        <p>
-            Complexul de parcuri eoliene de la Fântânele-Cogealac este unul dintre cele mai mari din Europa, cu turbine care se înalță la peste 200 de metri. Aceste turbine nu doar transformă peisajul vizual, ci generează și o presiune acustică și o umbă dinamică care afectează animalele și ecosistemele locale. Expandarea energiei eoliene în Dobrogea este o ilustrare perfectă a modului în care căutarea energiei regenerabile duce la transformări dramatice ale peisajului.
-        </p>
+        <div class="d-md-flex align-items-start gap-4">
+            <div class="flex-grow-1">
+                <h2>Capitolul II: Peisajul Energetic și Industrial</h2>
+                <p>
+                    În ultimele decenii, Dobrogea s-a metamorfozat în „plămânul energetic” al României, oferind un spectacol vizual unde tehnologia de ultimă oră se suprapune peste relieful arhaic. Această tranziție industrială a redesenat linia orizontului, transformând stepa dobrogeană dintr-un spațiu pur agricol într-un hub tehnologic vital pentru economia națională.
+                </p>
 
-        <h3>Complexul Nuclear și Industrial</h3>
-        <p>
-            Silueta Centralei Nucleare de la Cernavodă și podurile feroviare/rutiere care traversează Dunărea reprezintă puncte de reper ale peisajului construit. Acestora li se adaugă porturile (Constanța, Midia) și rafinăriile, unde peisajul este definit de rezervoare metalice, macarale gigantice și structuri de beton. Aceste instalații industriale nu doar transformă peisajul, ci și economia întregii regiuni, marcând-o cu amprenta inconfundabilă a dezvoltării economice moderne.
-        </p>
-        <p>
-            Centrala Nucleară de la Cernavodă este o instalație de importanță strategică pentru energia României, dar și o marcă vizibilă a dezvoltării industriale. Porturile din Constanța și Midia servesc ca hub pentru comerțul internațional, iar rafinăriile transformă petrolul brut în produse petrochimice. Aceste instalații industriale masive creează o peisaj de metal, beton și poluare industrială care contrasta puternic cu frumusețea naturală a regiunii.
-        </p>
-
-        <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="../poze/peisajul-energetic/panouri.webp" class="card-img-top" alt="Irigații" style="height: 225px; object-fit: cover;">
-                            
-                        <div class="card-body">
-                            <p class="card-text">Sistemele de panouri solare.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="../poze/peisajul-energetic/eoliene.webp" class="card-img-top" alt="Viticultură" style="height: 225px; object-fit: cover;">
-                            
-                        <div class="card-body">
-                            <p class="card-text">Sisteme de eoliene.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="../poze/peisajul-energetic/centrala.jpg" class="card-img-top" alt="Cereale" style="height: 225px; object-fit: cover;">
-                            
-                        <div class="card-body">
-                            <p class="card-text">Centrala Nucleară de la Cernavodă.</p>
-                        </div>
-                    </div>
-                </div>
-
+                <h3>Parcurile Eoliene – „Pădurea de Fier”</h3>
+                <p>
+                    Platourile înalte ale regiunii găzduiesc astăzi una dintre cele mai mari concentrații de turbine eoliene din Europa, precum gigantul proiect Fântânele-Cogealac. Sute de coloane albe, de înălțimi colosale, au creat un peisaj cinetic unic, unde vântul — forța invizibilă a naturii — este captat și transformat într-o resursă palpabilă prin mișcarea ritmică a palelor.
+                </p>
+                <p>
+                    Această prezență tehnologică nu este lipsită de impact; dincolo de producția de energie verde, ea introduce elemente noi în ecosistem, precum umbrele dinamice care baleiază terenul și o amprentă acustică constantă. Astfel, mediul rural tradițional este forțat să conviețuiască cu o estetică industrială futuristă, definind un nou tip de peisaj antropic.
+                </p>
             </div>
-        
-    </section>
-    
+
+            <div class="video-container" style="min-width: 320px; max-width: 450px; top: 20px; padding-bottom: 20px;">
+                <video autoplay muted loop playsinline style="width: 100%; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.2);">
+                    <source src="../video/peisajul-energetic/energie.mp4" type="video/mp4">
+                    Browserul tău nu suportă elementul video.
+                </video>
+            </div>
+        </div>
+
+        <div class="mt-0">
+            <h3>Complexul Nuclear și Infrastructura Strategică</h3>
+            <p>
+                Un punct de referință fundamental al regiunii este silueta brutalistă a Centralei Nucleare de la Cernavodă. Această megastructură de beton și oțel, împreună cu sistemele de poduri care încalecă Dunărea, reprezintă triumful ingineriei asupra barierelor naturale. Complexul nu este doar un producător de energie, ci și un nucleu în jurul căruia s-a dezvoltat un întreg sistem de securitate și logistică ce domină cursul fluviului.
+            </p>
+            <p>
+                Peisajul industrial se extinde spre litoral prin porturile Constanța și Midia, unde natura este complet subordonată funcționalității. Aici, orizontul este definit de macarale gigantice, rezervoare metalice masive și rafinării de petrol. Acest ansamblu de metal și beton creează o barieră vizuală rigidă, un contrast izbitor față de fragilitatea zonelor protejate limitrofe, subliniind puterea cu care omul a modelat teritoriul pentru a-și asigura progresul economic.
+            </p>
+        </div>
+
+<div class="container mt-5">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const cards = document.querySelectorAll('.video-card');
+
+                    cards.forEach(card => {
+                        const video = card.querySelector('.hover-video');
+
+                        card.addEventListener('mouseenter', () => {
+                            video.play().catch(error => {
+                                console.log("Autoplay a fost blocat de browser:", error);
+                            });
+                        });
+
+                        card.addEventListener('mouseleave', () => {
+                            video.pause();
+                            video.currentTime = 0;
+                        });
+                    });
+                });
+            </script>
+            <div class="col">
+                <div class="card shadow-sm video-card">
+                    <div class="media-container">
+                        <img src="../poze/peisajul-energetic/panouri.webp" class="card-img-top" alt="Panouri">
+                        <video class="hover-video" muted loop playsinline>
+                            <source src="../video/peisajul-energetic/panouri.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Sistemele de panouri fotovoltaice.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card shadow-sm video-card">
+                    <div class="media-container">
+                        <img src="../poze/peisajul-energetic/eoliene.webp" class="card-img-top" alt="Eoliene">
+                        <video class="hover-video" muted loop playsinline>
+                            <source src="../video/peisajul-energetic/eoliene.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Turbinele eoliene din Dobrogea.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card shadow-sm video-card">
+                    <div class="media-container">
+                        <img src="../poze/peisajul-energetic/centrala.jpg" class="card-img-top" alt="Centrala">
+                        <video class="hover-video" muted loop playsinline>
+                            <source src="../video/peisajul-energetic/centrala.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Centrala Nucleară Cernavodă.</p>
+                    </div>
+                </div>
+            </div>
+            </div> <div class="row">
+                <div class="col-12 text-center my-5">
+                <h2 class="display-6">Amprenta Industrială în Dobrogea</h2>
+                <hr class="w-25 mx-auto">
+                </div>
+             </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card shadow-sm video-card">
+                            <div class="media-container">
+                                <img src="../poze/peisajul-energetic/romcim.jpg" class="card-img-top" alt="Romcim">
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Fabrica Romcim Medgidia.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm video-card">
+                            <div class="media-container">
+                                <img src="../poze/peisajul-energetic/fabrica de amidon.jpg" class="card-img-top" alt="Amidon">
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Fabrica de Amidon.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm video-card">
+                            <div class="media-container">
+                                <img src="../poze/peisajul-energetic/sterk.jpg" class="card-img-top" alt="Sterk">
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Platforma industrială Sterk.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> </div>
+        </div>
+    </div>
+</section>
+    </main>
+
     <footer>
         <p>&copy; 2026 Amprenta Omului în Peisajul Dobrogean</p>
     </footer>
-
 </body>
 </html>

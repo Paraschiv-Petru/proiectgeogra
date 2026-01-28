@@ -22,7 +22,7 @@ main {
     flex-grow: 1;
 }
 
-/* ========== HEADER ========== */
+/* ========== HEADER MODIFICAT (ORIZONTAL) ========== */
 header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
@@ -34,12 +34,12 @@ header {
     box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
 }
 
-.header-top {
+.header-content {
+    padding: 30px 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding: 16px 20px;
-    gap: 20px;
+    gap: 25px; /* Spațiu între titlu și butoane */
 }
 
 h1 {
@@ -49,96 +49,63 @@ h1 {
     color: white;
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    flex-grow: 1;
 }
 
-/* Hamburger Button */
-.hamburger-btn {
-    background: transparent;
-    border: none;
-    cursor: pointer;
+.subtitle {
+    display: block;
+    font-size: 0.65em;
+    font-weight: 400;
+    margin-top: 6px;
+    text-transform: none;
+    letter-spacing: 0.4px;
+    opacity: 0.92;
+    font-style: italic;
+}
+
+/* ========== NAVIGAȚIE ORIZONTALĂ (PASTILE) ========== */
+.main-nav {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding: 8px;
-    border-radius: 6px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    justify-content: center;
 }
 
-.hamburger-btn:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: scale(1.1);
-}
-
-.hamburger-btn span {
-    width: 28px;
-    height: 3px;
-    background: white;
-    border-radius: 2px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Menu Navigation Bar */
-.menu-navbar {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%);
-    backdrop-filter: blur(10px);
-}
-
-.menu-navbar.active {
-    max-height: 500px;
-}
-
-.menu {
+.nav-links {
     list-style: none;
-    padding: 12px 0;
-    margin: 0;
     display: flex;
-    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.menu li {
-    margin: 0;
-}
-
-.menu a {
-    display: flex;
-    align-items: center;
-    color: white;
+.nav-links li a {
     text-decoration: none;
-    padding: 14px 24px;
+    color: white;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border-left: 3px solid transparent;
-    position: relative;
+    backdrop-filter: blur(8px);
 }
 
-.menu a::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 3px;
+.nav-links li a:hover {
     background: white;
-    transform: scaleY(0);
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #764ba2;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.menu a:hover {
-    background: rgba(255, 255, 255, 0.15);
-    padding-left: 28px;
+.nav-links li a.active {
+    background: white;
+    color: #764ba2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.menu a:hover::before {
-    transform: scaleY(1);
-}
-
-/* ========== CONTENT ========== */
-/* ========== CONTENT ========== */
+/* ========== CONTENT SPECIFIC SURSE ========== */
 .resources-intro {
     text-align: center;
     padding: 40px 20px;
@@ -179,6 +146,9 @@ h1 {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
     border-top: 3px solid #667eea;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .resource-item:hover {
@@ -216,7 +186,7 @@ h1 {
     border-radius: 6px;
     font-size: 14px;
     font-weight: 600;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
 }
 
 .resource-link:hover {
@@ -237,27 +207,25 @@ footer {
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
-    header {
-        position: sticky;
+    h1 {
+        font-size: 22px;
     }
 
-    h1 {
-        font-size: 24px;
+    .nav-links {
+        gap: 8px;
+    }
+
+    .nav-links li a {
+        padding: 8px 16px;
+        font-size: 12px;
     }
 
     .resources-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
-        padding: 20px 10px;
-        margin: 0 10px;
     }
+}
 
-    .resource-item {
-        padding: 24px 20px;
-    }
-
-    .resources-intro {
-        padding: 30px 15px;
-        margin: 15px;
-    }
+/* Curățare stiluri hamburger (nu mai sunt necesare) */
+.hamburger-btn, .menu-navbar, .header-top {
+    display: none;
 }
